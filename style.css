@@ -2,7 +2,14 @@
   display: flex;
 }
 
-.box1 {
+.main-container div {
+  border: 1px solid;
+  width: 40px;
+  height: 40px;
+
+}
+
+/* .box1 {
   background-color: blue;
 }
 
@@ -20,4 +27,4 @@
 
 .box5 {
   background-color: purple;
-}
+} */
