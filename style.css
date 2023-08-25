@@ -1,30 +1,9 @@
-.main-container {
+/*Start with a nice, plain Jane page*/
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.grid-container > div {
   display: flex;
 }
-
-.main-container div {
-  border: 1px solid;
-  width: 40px;
-  height: 40px;
-
-}
-
-/* .box1 {
-  background-color: blue;
-}
-
-.box2 {
-  background-color: red;
-}
-
-.box3 {
-  background-color: green;
-}
-
-.box4 {
-  background-color: orange;
-}
-
-.box5 {
-  background-color: purple;
-} */
