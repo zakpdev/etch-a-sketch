@@ -13,7 +13,9 @@ Be careful with borders and margins, as they can adjust the size of the squares!
 const gridContainer = document.querySelector(".grid-container");
 
 function createRow() {
-  gridContainer.appendChild(document.createElement('div'));
+  const newRow = document.createElement('div');
+  newRow.classList.add('.grid-row');
+  gridContainer.appendChild(newRow);
 }
 
 createRow();
