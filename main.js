@@ -27,9 +27,16 @@ function createColumn(i) {
   gridRow.appendChild(newColumn);
 }
 
-createRow();
+/* createRow();
 
-createColumn(0);
+createColumn(0); */
+
+for (let i = 0; i < 16; i++) {
+  createRow();
+  for (let j = 0; j <16; j++) {
+    createColumn(i);
+  }
+}
 
 
 
