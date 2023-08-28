@@ -6,4 +6,12 @@
 
 .grid-container > div {
   display: flex;
+  border: 1px solid;
+  padding: 0;  /*for troubleshooting - remove me?*/
+}
+
+.cell {
+  width: 60px;
+  height: 60px;
+  box-shadow: 1px -1px lightslategray; /*for troubleshooting - remove me?*/
 }

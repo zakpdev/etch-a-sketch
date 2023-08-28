@@ -16,14 +16,14 @@ console.log(gridContainer.children);
 
 function createRow() {
   const newRow = document.createElement('div');
-  newRow.classList.add('.grid-row');
+  newRow.classList.add('grid-row');
   gridContainer.appendChild(newRow);
 }
 
 function createColumn(i) {
   const gridRow = gridContainer.children[i];
   const newColumn = document.createElement('div');
-  newColumn.classList.add('.cell');
+  newColumn.classList.add('cell');
   gridRow.appendChild(newColumn);
 }
 
