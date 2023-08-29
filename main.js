@@ -10,7 +10,31 @@ Be careful with borders and margins, as they can adjust the size of the squares!
 
 //create a row, fill it with 16 columns then repeat
 
+//grab the grid container div
 const gridContainer = document.querySelector(".grid-container");
+
+//function to create the grid
+function createGrid() {
+  //const cellDiv = document.createElement('div');
+  for (let i = 0; i < 16; i++) {
+    const rowDiv = document.createElement('div');
+    rowDiv.classList.add('row');
+    gridContainer.appendChild(rowDiv);
+    for (let j = 0; j < 16; j++) {
+      const gridRow = gridContainer.children[i];
+      const cellDiv = document.createElement('div');
+      cellDiv.classList.add('column');
+      gridRow.appendChild(cellDiv);
+    }    
+    //gridContainer.appendChild(document.createElement('div'));
+  }
+}
+
+createGrid();
+
+
+
+/* const gridContainer = document.querySelector(".grid-container");
 
 console.log(gridContainer.children);
 
@@ -18,25 +42,25 @@ function createRow() {
   const newRow = document.createElement('div');
   newRow.classList.add('grid-row');
   gridContainer.appendChild(newRow);
-}
+} */
 
-function createColumn(i) {
+/* function createColumn(i) {
   const gridRow = gridContainer.children[i];
   const newColumn = document.createElement('div');
   newColumn.classList.add('cell');
   gridRow.appendChild(newColumn);
-}
+} */
 
 /* createRow();
 
 createColumn(0); */
 
-for (let i = 0; i < 16; i++) {
+/* for (let i = 0; i < 16; i++) {
   createRow();
   for (let j = 0; j <16; j++) {
     createColumn(i);
   }
-}
+} */
 
 
 
