@@ -6,6 +6,8 @@
 
 body {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
@@ -24,6 +26,10 @@ body {
 
 .size-button {
   margin-top: 10px;
+}
+
+.grid-area {
+  flex: 1;
 }
 
 /* .header-right {
