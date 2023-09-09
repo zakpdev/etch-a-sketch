@@ -11,3 +11,21 @@ body {
 .header {
   display: flex;
 }
+
+.header-left, .header-right {
+  flex: 1;
+}
+
+.header-middle {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.size-button {
+  margin-top: 10px;
+}
+
+/* .header-right {
+  padding: 10px;
+} */
