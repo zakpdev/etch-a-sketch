@@ -29,7 +29,17 @@ body {
 }
 
 .grid-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex: 1;
+}
+
+.grid {
+  height: auto;
+  width: 626.4px;
+  aspect-ratio: 1/1;
+  border: 1px solid;
 }
 
 /* .header-right {
