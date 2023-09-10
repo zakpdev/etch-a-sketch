@@ -40,6 +40,18 @@ body {
   width: 43.5%;
   aspect-ratio: 1/1;
   border: 1px solid;
+  display: flex;
+  flex-direction: column;
+}
+
+.row  {
+  flex: 1;
+  display: flex;
+}
+
+.column {
+  flex: 1;
+  box-shadow: 1px -1px lightslategray;
 }
 
 /* .header-right {
