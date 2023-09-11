@@ -21,3 +21,6 @@ https://www.youtube.com/watch?v=RxUc6ZWwgfw
 
 Getting a random integer between two values, inclusive
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random#getting_a_random_integer_between_two_values_inclusive
+
+Find Which Radio Button is Selected Using Javascript
+https://www.youtube.com/watch?v=J254pngGt6E
