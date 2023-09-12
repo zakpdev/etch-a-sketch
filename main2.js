@@ -60,32 +60,43 @@ function createGrid() {
       const gridRow = gridContainer.children[i];
       const cellDiv = document.createElement('div');
       cellDiv.classList.add('column');
-      //cellDiv.classList.add('0.0');
 
-      //adds event listener to "color in" the cell when the mouse hovers over it
-      cellDiv.addEventListener("mouseover", function() {
-        if (sessionStorage.getItem("radioSelection") == "random-colors") {
-          //cellDiv.style.opacity = 1.0;
-          let r = getRandomIntInclusive(0,255);
-          let g = getRandomIntInclusive(0,255);
-          let b = getRandomIntInclusive(0, 255);
-          cellDiv.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
-        } else if (sessionStorage.getItem("radioSelection") == "shade-mode"){
-          if (cellDiv.style.opacity < 1.0){
-            cellDiv.style.opacity += 0.1;
-            cellDiv.style.backgroundColor = 'rgb(0,0,0)';
-          }          
-        }else {
-          cellDiv.style.opacity = 1.0;
-          cellDiv.style.backgroundColor = "black";
-        }                
-      });
+      switch (sessionStorage.getItem("radioSelection")) {
+        case "vanilla":
+          cellDiv.addEventListener("mouseover", function() {
+            cellDiv.style.backgroundColor = "black";
+          })
+          break;
+        
+        case null:
+          cellDiv.addEventListener("mouseover", function() {
+            cellDiv.style.backgroundColor = "black";
+          })
+          break;  
 
+        case "random-colors":
+          cellDiv.addEventListener("mouseover", function() {
+            let r = getRandomIntInclusive(0,255);
+            let g = getRandomIntInclusive(0,255);
+            let b = getRandomIntInclusive(0,255);
+            cellDiv.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+          })
+          break;
+
+        case "shade-mode":
+          /* cellDiv.style.backgroundColor = 'rgb(0,0,0)';
+          cellDiv.style.opacity = 0.0; */
+          cellDiv.addEventListener("mouseover", function() {
+            if (+cellDiv.style.opacity < 1.0) {
+              cellDiv.style.opacity = +cellDiv.style.opacity + 0.1;
+              cellDiv.style.backgroundColor = 'rgba(0,0,0,' + cellDiv.style.opacity + ')';
+            }
+          })
+          break;
+      }
       gridRow.appendChild(cellDiv);
     }  
   }
 }
 
 createGrid();
-
-/* document.querySelector('input[name=flavor]:checked').value */
